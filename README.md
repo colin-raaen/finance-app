@@ -2,11 +2,11 @@
 Finance application that emulates stock trading
 
 ## Technologies
-*Python
-*Flask with session authentication
-*SQLite3
-*HTML
-*Bootstrap
+* Python
+* Flask with session authentication
+* SQLite3
+* HTML
+* Bootstrap
 
 ## Summary
 Finance is a web app that allows logged-in users to "buy" and "sell" stocks (with pretend money) as well as look up real stock quotes fetched from IEX API. Users can also view their stock portfolio transaction history.
