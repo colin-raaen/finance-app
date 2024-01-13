@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stock
+{% endblock %}
+
+{% block main %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="messages">
+                <p>{{ message }}</p>
+            </div>
+        {% endif %}
+    {% endwith %}
+    <h5>YOUR POSITIONS</h5>
+        <table class="table table-hover">
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Current Price</th>
+                <th>Current Value</th>
+            </tr>
+            <!-- Loop through list of dictionaries of shares owned -->
+            {% for share in shares_owned %}
+            <tr>
+                <!-- Loop through key-values pairs of each stock owned -->
+                {% for symbol in share %}
+                    <!-- print value into index table -->
+                    <td>{{ share[symbol] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>Remaining Cash Balance</b></td>
+                <td>{{ cash_balance }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>TOTAL (Cash + Positions)</b></td>
+                <td>{{ total_user_value }}</td>
+            </tr>
+        </table>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Stock
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post" required>
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="symbol" id="symbol">
+                <option disabled selected>Stock Symbol</option>
+                <!-- Loop through list of dictionaries of shares owned -->
+                {% for share in user_shares %}
+                    {% for symbol in share %}
+                    <option value="{{ share[symbol] }}">{{ share[symbol] }}</option>
+                    {% endfor %}
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" min="0" id="shares" name="shares" type="number" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Sell Stock</button>
+    </form>
+{% endblock %}

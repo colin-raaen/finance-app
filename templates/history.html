@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transactions History
+{% endblock %}
+
+{% block main %}
+    <h5>YOUR TRANSACTION HISTORY</h5>
+        <table class="table table-hover">
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Transaction Type</th>
+                <th>Purchase Price</th>
+                <th>Shares</th>
+                <th>Transaction Amount</th>
+                <th>Date of Transaction</th>
+            </tr>
+            <!-- Loop through list of dictionaries of shares owned -->
+            {% for share in transaction_history %}
+            <tr>
+                <!-- Loop through key-values pairs of each stock owned -->
+                {% for symbol in share %}
+                    <!-- print value into index table -->
+                    <td>{{ share[symbol] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+{% endblock %}
