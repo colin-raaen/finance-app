@@ -1,2 +1,2 @@
 # Finance-App
-Finance application that emulated stock trading
+Finance application that emulates stock trading
