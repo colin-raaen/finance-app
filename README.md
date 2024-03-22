@@ -6,6 +6,7 @@ Finance application that emulates stock trading
 * Flask with session authentication
 * SQLite3
 * HTML
+* CSS
 * Bootstrap
 
 ## Summary
