@@ -21,7 +21,6 @@ pexpect==4.8.0
 psycopg2==2.9.9
 ptyprocess==0.7.0
 pycparser==2.21
-PyYAML==5.4.1
 requests==2.28.2
 SQLAlchemy==1.4.46
 sqlparse==0.4.3
