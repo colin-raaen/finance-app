@@ -3,7 +3,6 @@ Flask==2.2.3
 Flask-Session==0.4.0
 gunicorn==21.2.0
 Jinja2==3.1.2
-lib50==3.0.5
 psycopg2==2.9.9
 requests==2.28.2
 SQLAlchemy==1.4.46
